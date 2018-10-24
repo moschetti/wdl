@@ -133,8 +133,8 @@ docker:
 ```
 gcloud \
   alpha genomics pipelines run \
-  --pipeline-file wdl_pipeline.yaml \
-  --zones us-central1-f \
+  --command-line '/wdl_runner/wdl_runner.sh' \
+  --regions us-central1 \
   --inputs-from-file WDL=test-wdl/ga4ghMd5.wdl \
   --inputs-from-file WORKFLOW_INPUTS=test-wdl/ga4ghMd5.inputs.json \
   --inputs-from-file WORKFLOW_OPTIONS=test-wdl/basic.papi.us.options.json \
